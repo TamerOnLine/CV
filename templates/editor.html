@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <title>Bearbeiten: {{ filename }}</title>
+  <style>
+    body {
+      font-family: Arial;
+      max-width: 800px;
+      margin: 50px auto;
+    }
+    textarea {
+      width: 100%;
+      height: 500px;
+      font-family: monospace;
+      font-size: 14px;
+      padding: 10px;
+      border: 1px solid #ccc;
+    }
+    button {
+      margin-top: 15px;
+      padding: 10px 20px;
+      font-size: 16px;
+      background-color: #0a7dda;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #055ca1;
+    }
+  </style>
+</head>
+<body>
+  <h2>✏️ تعديل القسم: <code>{{ filename }}</code> ({{ lang }})</h2>
+  <form method="post">
+    <textarea name="content">{{ content }}</textarea><br>
+    <button type="submit">💾 حفظ التعديلات</button>
+  </form>
+</body>
+</html>

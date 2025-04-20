@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <title>Lebenslauf – Tamer Hamad Faour</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+  <div class="container">
+    {% for section in sections %}
+      <div class="page-break-avoid">{{ section | safe }}</div>
+    {% endfor %}
+  </div>
+</body>
+</html>
